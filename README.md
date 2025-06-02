@@ -21,4 +21,4 @@
 
 ## 📜 Certificate
 
-![My Certificate](assets/my_certificate.png)
+![My Certificate](assets/image.png)
