@@ -73,11 +73,11 @@ def handle_initiated():
 def handle_pre_writing():
     if st.session_state["page3_write_article_state"] == "pre_writing":
         status = st.status(
-            "I am brain**STORM**ing now to research the topic. (This may take 2-3 minutes.)"
+            "I am **😴😭** now to research the topic. (This may take 2-3 minutes.)"
         )
         st_callback_handler = demo_util.StreamlitCallbackHandler(status)
         with status:
-            # STORM main gen outline
+            # WEBpedia main gen outline
             st.session_state["runner"].run(
                 topic=st.session_state["page3_topic"],
                 do_research=True,
@@ -95,7 +95,7 @@ def handle_pre_writing():
                 DemoFileIOHelper.read_json_file(conversation_log_path)
             )
             st.session_state["page3_write_article_state"] = "final_writing"
-            status.update(label="brain**STORM**ing complete!",
+            status.update(label="**😊😊** complete!",
                           state="complete")
 
 

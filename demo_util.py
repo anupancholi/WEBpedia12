@@ -9,10 +9,7 @@ import markdown
 import pytz
 import streamlit as st
 
-# If you install the source code instead of the `knowledge-storm` package,
-# Uncomment the following lines:
-# import sys
-# sys.path.append('../../')
+
 from knowledge_storm import (
     STORMWikiRunnerArguments,
     STORMWikiRunner,
