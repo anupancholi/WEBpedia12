@@ -8,6 +8,7 @@ from streamlit_card import card
 
 # set page config and display title
 def my_articles_page():
+    DemoUIHelper.show_sticky_header()
     with st.sidebar:
         _, return_button_col = st.columns([2, 5])
         with return_button_col:
@@ -35,9 +36,11 @@ def my_articles_page():
                 title=" / ".join(card_title),
                 text=article_name.replace("_", " "),
                 image=DemoFileIOHelper.read_image_as_base64(
-                    os.path.join(demo_util.get_demo_dir(), "assets", "void.jpg")
+                    os.path.join(demo_util.get_demo_dir(),
+                                 "assets", "void.jpg")
                 ),
-                styles=DemoUIHelper.get_article_card_UI_style(boarder_color="#9AD8E1"),
+                styles=DemoUIHelper.get_article_card_UI_style(
+                    boarder_color="#9AD8E1"),
             )
             if hasClicked:
                 st.session_state["page2_selected_my_article"] = article_name
@@ -49,7 +52,8 @@ def my_articles_page():
         if len(st.session_state["page2_user_articles_file_path_dict"]) > 0:
             # get article names
             article_names = sorted(
-                list(st.session_state["page2_user_articles_file_path_dict"].keys())
+                list(
+                    st.session_state["page2_user_articles_file_path_dict"].keys())
             )
             # configure pagination
             pagination = st.container()
@@ -86,7 +90,8 @@ def my_articles_page():
                     title="Get started",
                     text="Start your first research!",
                     image=DemoFileIOHelper.read_image_as_base64(
-                        os.path.join(demo_util.get_demo_dir(), "assets", "void.jpg")
+                        os.path.join(demo_util.get_demo_dir(),
+                                     "assets", "void.jpg")
                     ),
                     styles=DemoUIHelper.get_article_card_UI_style(),
                 )

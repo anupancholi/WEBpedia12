@@ -363,6 +363,8 @@ class DemoTextProcessingHelper:
 
 
 class DemoUIHelper:
+
+    @staticmethod
     def st_markdown_adjust_size(content, font_size=20):
         st.markdown(
             f"""
@@ -456,6 +458,32 @@ class DemoUIHelper:
             </body>
         </html>
         """
+
+    @staticmethod
+    def show_sticky_header():
+        st.markdown(
+            """
+            <style>
+                .webpedia-header {
+                    position: sticky;
+                    top: 0;
+                    background-color: #F9FAFB;
+                    padding: 10px 0;
+                    text-align: center;
+                    font-size: 36px;
+                    font-weight: bold;
+                    color: #2C3E50;
+                    z-index: 100;
+                    border-bottom: 1px solid #E5E7EB;
+                    font-family: 'Segoe UI', sans-serif;
+                }
+            </style>
+            <div class='webpedia-header'>
+                WEBpedia 🌐
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
 
 
 def _construct_citation_dict_from_search_result(search_results):

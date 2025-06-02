@@ -6,3 +6,5 @@ pages_util/.DS_Store
 .streamlit/secrets.toml
 
 DEMO_WORKING_DIR
+
+.venv

@@ -59,7 +59,8 @@ def handle_not_started():
 
 def handle_initiated():
     if st.session_state["page3_write_article_state"] == "initiated":
-        current_working_dir = os.path.join(demo_util.get_demo_dir(), "DEMO_WORKING_DIR")
+        current_working_dir = os.path.join(
+            demo_util.get_demo_dir(), "DEMO_WORKING_DIR")
         if not os.path.exists(current_working_dir):
             os.makedirs(current_working_dir)
 
@@ -94,7 +95,8 @@ def handle_pre_writing():
                 DemoFileIOHelper.read_json_file(conversation_log_path)
             )
             st.session_state["page3_write_article_state"] = "final_writing"
-            status.update(label="brain**STORM**ing complete!", state="complete")
+            status.update(label="brain**STORM**ing complete!",
+                          state="complete")
 
 
 def handle_final_writing():
@@ -119,7 +121,8 @@ def handle_final_writing():
 
             # update status bar
             st.session_state["page3_write_article_state"] = "prepare_to_show_result"
-            status.update(label="information snythesis complete!", state="complete")
+            status.update(label="information snythesis complete!",
+                          state="complete")
 
 
 def handle_prepare_to_show_result():
@@ -149,6 +152,7 @@ def handle_completed():
 
 
 def create_new_article_page():
+    DemoUIHelper.show_sticky_header()
     demo_util.clear_other_page_session_state(page_index=3)
 
     if "page3_write_article_state" not in st.session_state:

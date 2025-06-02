@@ -3,8 +3,8 @@ showErrorDetails = false
 toolbarMode = "minimal"
 
 [theme]
-primaryColor = "#F63366"
-backgroundColor = "#FFFFFF"
-secondaryBackgroundColor = "#F0F2F6"
-textColor = "#262730"
-font = "sans serif"
+primaryColor = "#2C3E50"         # Deep blue-gray for buttons
+backgroundColor = "#F9FAFB"      # Light background
+secondaryBackgroundColor = "#E5E7EB"  # Cards or sidebars
+textColor = "#111827"            # Dark text
+font = "sans serif"              # Other options: "monospace", "serif"
