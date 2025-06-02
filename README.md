@@ -1,5 +1,5 @@
-# WEBpedia: Minimal User Interface
-##[Link](https://webpedia.streamlit.app)
+# WEBpedia: Minimal User Interface  [Link](https://webpedia.streamlit.app)
+
 **WEBpedia** is a minimal web interface built for intelligent article generation using `STORMWIKIRunner`. It provides a streamlined experience for users to create, view, and manage AI-generated articles.
 
 ## ✨ Features
